@@ -15,6 +15,8 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, BatchNormalization
 from twilio.rest import Client
 import altair as alt
+from bs4 import BeautifulSoup
+import requests
 
 # Custom CSS for full-screen background, fade-in effect, and other styling
 def set_bg_as_image():
@@ -385,7 +387,8 @@ if uploaded_file is not None:
     df = df.melt(id_vars=['Year'], var_name='Crime', value_name='Cases')
 
     # Define a radio button in Streamlit
-    option = st.sidebar.radio('Select a category:', ('Home', 'Crime Against Women'))
+    option = st.sidebar.radio('Select a category:', ('Home', 'Crime Against Women', 'Crime News'))
+
 
     # Clear the main page when 'Crime Against Women' is selected
     if option == 'Crime Against Women':
@@ -397,7 +400,31 @@ if uploaded_file is not None:
         
         # Display the Plotly chart only
         st.plotly_chart(fig)
+
+#<-------------------------------------- News Scrapping ----------------------------------------------------------------------->
     
+    # Add the function to scrape news
+    def fetch_crime_news():
+        url = 'https://www.ndtv.com/topic/delhi-crime'
+        response = requests.get(url)
+        soup = BeautifulSoup(response.content, 'html.parser')
+        news_containers = soup.find_all('div', class_='src_itm-ttl')
+        news_articles = []
+        for container in news_containers:
+            news_link = container.find('a')
+            if news_link:
+                title = news_link.text.strip()
+                link = news_link['href'].strip()
+                news_articles.append({'title': title, 'url': link})
+        return news_articles
+    
+    if option == 'Crime News':
+        st.header("Latest Crime News")
+        news_data = fetch_crime_news()
+        for article in news_data:
+            st.markdown(f"### [{article['title']}]({article['url']})")
+            st.markdown("---")
+
         
 
        
@@ -407,5 +434,7 @@ else:
             <p>"Sentinel Mark 2, the successor of its previous iteration, stands as a robust crime analysis and prediction tool. Engineered with precision, it harnesses cutting-edge analytics to forecast criminal activity with startling accuracy. This advanced tool aids law enforcement agencies in preemptive measures, ensuring public safety with proactive strategies. Its seamless integration with modern tech provides an unparalleled edge in the realm of crime prevention."</p>
         </div>
     ''', unsafe_allow_html=True)
+
+
 
 
