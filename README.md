@@ -65,7 +65,7 @@ To utilize Sentinel Mark 2:
 
 ## Contribution
 
-We welcome contributions to enhance Sentinel Mark 2. Your input can range from improving existing features, adding new functionalities, or rectifying bugs. For substantial changes, please initiate an issue first to discuss potential modifications.
+I welcome contributions to enhance Sentinel Mark 2. Your input can range from improving existing features, adding new functionalities, or rectifying bugs. For substantial changes, please initiate an issue first to discuss potential modifications.
 
 ## License
 
