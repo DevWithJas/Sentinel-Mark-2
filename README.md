@@ -72,3 +72,16 @@ We welcome contributions to enhance Sentinel Mark 2. Your input can range from i
 This project adheres to the [MIT License](LICENSE.md).
 
 As a continuation and enhancement of the Sentinel series, Sentinel Mark 2 not only serves as a crime predictive model but also symbolizes a commitment to reinforcing community safety through the innovative use of data and technology.
+
+![Screenshot (32)](https://github.com/CreateJas/Sentinel-Mark-2/assets/91935368/79d67abf-0f91-488a-b700-0929a9d5b110)
+![Screenshot (33)](https://github.com/CreateJas/Sentinel-Mark-2/assets/91935368/f52ef46b-55e3-4801-9ba2-3930e61c173d)
+![Screenshot (34)](https://github.com/CreateJas/Sentinel-Mark-2/assets/91935368/e7267eb0-6a5e-43d8-b80d-f3b7caaf347b)
+![Screenshot (35)](https://github.com/CreateJas/Sentinel-Mark-2/assets/91935368/62b38319-90e9-42e9-b0ce-6eb5ca5ef71a)
+![Screenshot (36)](https://github.com/CreateJas/Sentinel-Mark-2/assets/91935368/29868b51-dad6-4004-9b25-7f5fb197d155)
+![Screenshot (37)](https://github.com/CreateJas/Sentinel-Mark-2/assets/91935368/bd3febe3-9951-42a3-b4a5-90f8ee82fdea)
+
+
+
+
+
+
